@@ -1,0 +1,57 @@
+﻿@Html.Partial("~/Views/Admin/Shared/_PartialHeader.cshtml")
+
+    <div class="page-content">
+        <!-- Main sidebar -->
+        @Html.Partial("~/Views/Admin/Shared/_PartialNav.cshtml")
+        <!-- /main sidebar -->
+       
+        <!-- Main content -->
+        <div class="content-wrapper">
+            @RenderSection("PageHeader", required: false)
+            <!-- Content area -->
+            <div class="content">
+                <!-- Inner container -->
+                <div class="d-flex align-items-start flex-column flex-md-row">
+                    <!-- Left content -->
+                    <div class="w-100 order-2 order-md-1">
+                        @RenderBody()
+                    </div>
+                    <!-- /left content -->
+                    <!-- Right sidebar component -->
+                    <div class="sidebar sidebar-light sidebar-component sidebar-component-right order-1 order-md-2 sidebar-expand-md bg-transparent border-0 shadow-0">
+                        <!-- Sidebar content -->
+                        <div class="sidebar-content">
+                            @RenderSection("Sidebar", required: false)
+                        </div>
+                        <!-- /sidebar content -->
+                    </div>
+                    <!-- /right sidebar component -->
+                </div>
+                <!-- /inner container -->
+            </div>
+            <!-- /content area -->
+            <!-- Footer -->
+            <div class="navbar navbar-expand-lg navbar-light">
+                <div class="text-center d-lg-none w-100">
+                    <button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+                        <i class="icon-unfold mr-2"></i>
+                        Footer
+                    </button>
+                </div>
+                <div class="navbar-collapse collapse" id="navbar-footer">
+                    <span class="navbar-text">
+                        &copy; @DateTime.Now.Year. <a href="#">Veridian CMS</a> by <a href="http://www.veridiancu.org" target="_blank">Web Dev Team</a>
+                    </span>
+                    <ul class="navbar-nav ml-lg-auto">
+                        <li class="nav-item"><a href="" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> Support</a></li>
+                        <li class="nav-item"><a href="" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> Docs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- /footer -->
+        </div>
+        <!-- /main content -->
+    </div>
+    <!-- /page content -->
+
+@Html.Partial("~/Views/Admin/Shared/_PartialFooter.cshtml")

@@ -1,0 +1,345 @@
+﻿
+@{
+    ViewBag.Title = "Sidebar Right";
+    ViewBag.BodyClass = "sidebar-xs";
+    ViewBag.NavClass = "";
+    Layout = "~/Views/Admin/Shared/_LayoutSidebarRight.cshtml";
+}
+
+
+@section PageHeader {
+<div class="page-header">
+    <div class="page-header-content header-elements-md-inline">
+        <div class="page-title d-flex">
+            <h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">CMS Layout Page</span> - Content Sidebar. Right.</h4>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+        <div class="header-elements d-none">
+            <a href="#" class="btn btn-labeled btn-labeled-right bg-primary mr-2">Button <b><i class="icon-menu7"></i></b></a>
+            <a href="#" class="btn btn-labeled btn-labeled-right bg-primary mr-2">Button <b><i class="icon-menu7"></i></b></a>
+            <a href="#" class="btn btn-labeled btn-labeled-right bg-primary">Button <b><i class="icon-menu7"></i></b></a>
+        </div>
+    </div>
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                <a href="#" class="breadcrumb-item">Link</a>
+                <span class="breadcrumb-item active">Current</span>
+            </div>
+            <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+        </div>
+        <div class="header-elements d-none">
+            <div class="breadcrumb justify-content-center">
+                <a href="#" class="breadcrumb-elements-item">
+                    Link
+                </a>
+                <div class="breadcrumb-elements-item dropdown p-0">
+                    <a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <a href="#" class="dropdown-item">Action</a>
+                        <a href="#" class="dropdown-item">Another action</a>
+                        <a href="#" class="dropdown-item">One more action</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">Separate action</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+}
+
+<!-- Basic card -->
+<div class="card">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title">Basic card</h5>
+        <div class="header-elements">
+            <div class="list-icons">
+                <a class="list-icons-item" data-action="collapse"></a>
+                <a class="list-icons-item" data-action="fullscreen"></a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <h6 class="font-weight-semibold">Aliquam nec ultricies sapien</h6>
+        <p class="mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vitae blandit ligula. Aliquam nec ultricies sapien interdum ut vel nunc. Maecenas eu mattis ipsum. Quisque porttitor ipsum id nulla condimentum, non commodo dui vehicula. Etiam fringilla id quam eu fermentum. Donec vehicula ipsum ligula, a iaculis quam porttitor vel. Cras rutrum ullamcorper tincidunt. Vestibulum pretium augue lorem, et scelerisque mi ultricies vitae. Proin mollis magna nec tristique malesuada. Pellentesque sed fermentum est. Morbi a sem nec justo congue dapibus eget et lectus. Mauris laoreet tortor eleifend libero malesuada, eu dictum velit pharetra. </p>
+        <h6 class="font-weight-semibold">Aliquam nec ultricies sapien</h6>
+        <p class="mb-3">Nullam nec mauris metus. Aliquam nec ultricies sapien. Quisque dictum nulla id facilisis ultricies. Aliquam erat volutpat. Integer sagittis ut metus eget tincidunt. Phasellus tincidunt orci in quam fringilla, et viverra felis sodales. Nam faucibus, nisl ut pretium facilisis, lorem nunc imperdiet dui, ac ultrices libero urna tincidunt lectus. </p>
+        <h6 class="font-weight-semibold">Mauris velit sem</h6>
+        <p>Etiam vitae sem dui. Mauris velit sem, posuere ultricies sem eu, ornare semper eros. Pellentesque vestibulum neque elementum diam pulvinar ornare. Etiam vel arcu pharetra, eleifend eros non, molestie nisi. Quisque at sollicitudin sem. Proin nulla risus, dignissim nec quam ac, rutrum mattis libero. Sed id maximus dui. Vivamus arcu purus, pellentesque blandit est sit amet, pulvinar faucibus enim. Vivamus sed tempus ligula, eu tincidunt diam. Donec erat arcu, posuere vitae vehicula et, gravida eu neque. Quisque auctor, tortor id pharetra pellentesque, nisi sapien hendrerit lacus, nec sollicitudin quam sem et purus. Donec consectetur erat dolor. </p>
+    </div>
+</div>
+<!-- /basic card -->
+<!-- Basic table -->
+<div class="card">
+    <div class="card-header header-elements-inline">
+        <h5 class="card-title">Basic table</h5>
+        <div class="header-elements">
+            <div class="list-icons">
+                <a class="list-icons-item" data-action="collapse"></a>
+                <a class="list-icons-item" data-action="fullscreen"></a>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        Our CMS seed project includes the most basic components that can help you in the development process - basic grid example, card, table, form and page layouts with standard components. Nothing extra. Bootstrap components are always enabled.
+    </div>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr class="table-border-double">
+                    <th>#</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Eugene</td>
+                    <td>Kopyov</td>
+                    <td>Kopyov</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Victoria</td>
+                    <td>Baker</td>
+                    <td>Vicky</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>James</td>
+                    <td>Alexander</td>
+                    <td>Alex</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Franklin</td>
+                    <td>Morrison</td>
+                    <td>Frank</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!-- /basic table -->
+<!-- Form layouts -->
+<div class="row">
+    <div class="col">
+        <!-- Horizontal form -->
+        <div class="card">
+            <div class="card-header header-elements-inline">
+                <h5 class="card-title">Horizontal form</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="fullscreen"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form action="#">
+                    <div class="form-group row">
+                        <label class="col-lg-3 col-form-label">Text input</label>
+                        <div class="col-lg-9">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 col-form-label">Password</label>
+                        <div class="col-lg-9">
+                            <input type="password" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 col-form-label">Select</label>
+                        <div class="col-lg-9">
+                            <select name="select" class="form-control">
+                                <option value="opt1">Basic select</option>
+                                <option value="opt2">Option 2</option>
+                                <option value="opt3">Option 3</option>
+                                <option value="opt4">Option 4</option>
+                                <option value="opt5">Option 5</option>
+                                <option value="opt6">Option 6</option>
+                                <option value="opt7">Option 7</option>
+                                <option value="opt8">Option 8</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-lg-3 col-form-label">Textarea</label>
+                        <div class="col-lg-9">
+                            <textarea rows="5" cols="5" class="form-control" placeholder="Default textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /horizotal form -->
+    </div>
+    <div class="col">
+        <!-- Vertical form -->
+        <div class="card">
+            <div class="card-header header-elements-inline">
+                <h5 class="card-title">Vertical form</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a class="list-icons-item" data-action="fullscreen"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <form action="#">
+                    <div class="form-group">
+                        <label>Text input</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Select</label>
+                        <select name="select" class="form-control">
+                            <option value="opt1">Basic select</option>
+                            <option value="opt2">Option 2</option>
+                            <option value="opt3">Option 3</option>
+                            <option value="opt4">Option 4</option>
+                            <option value="opt5">Option 5</option>
+                            <option value="opt6">Option 6</option>
+                            <option value="opt7">Option 7</option>
+                            <option value="opt8">Option 8</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Textarea</label>
+                        <textarea rows="4" cols="4" class="form-control" placeholder="Default textarea"></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <!-- /vertical form -->
+    </div>
+</div>
+<!-- /form layouts -->
+
+
+@section Sidebar {
+    <!-- Sidebar search -->
+    <div class="card">
+        <div class="card-header bg-transparent header-elements-inline">
+            <span class="text-uppercase font-size-sm font-weight-semibold">Search</span>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item" data-action="collapse"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form action="#">
+                <div class="form-group-feedback form-group-feedback-right">
+                    <input type="search" class="form-control" placeholder="Search">
+                    <div class="form-control-feedback">
+                        <i class="icon-search4 font-size-base text-muted"></i>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /sidebar search -->
+    <!-- Sub navigation -->
+    <div class="card">
+        <div class="card-header bg-transparent header-elements-inline">
+            <span class="text-uppercase font-size-sm font-weight-semibold">Navigation</span>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item" data-action="collapse"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body p-0">
+            <ul class="nav nav-sidebar" data-nav-type="accordion">
+                <li class="nav-item-header">Category title</li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="icon-googleplus5"></i> Link</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link"><i class="icon-portfolio"></i> Another link</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <i class="icon-user-plus"></i>
+                        Link with badge
+                        <span class="badge bg-primary badge-pill ml-auto">2</span>
+                    </a>
+                </li>
+                <li class="nav-item-divider"></li>
+                <li class="nav-item nav-item-submenu">
+                    <a href="#" class="nav-link"><i class="icon-cog3"></i> Menu levels</a>
+                    <ul class="nav nav-group-sub">
+                        <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                        <li class="nav-item nav-item-submenu">
+                            <a href="#" class="nav-link">Second level with child</a>
+                            <ul class="nav nav-group-sub">
+                                <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                                <li class="nav-item nav-item-submenu">
+                                    <a href="#" class="nav-link">Third level with child</a>
+                                    <ul class="nav nav-group-sub">
+                                        <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                        <li class="nav-item"><a href="#" class="nav-link">Fourth level</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item"><a href="#" class="nav-link">Third level</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link">Second level</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- /sub navigation -->
+    <!-- Form sample -->
+    <div class="card">
+        <div class="card-header bg-transparent header-elements-inline">
+            <span class="text-uppercase font-size-sm font-weight-semibold">Form example</span>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item" data-action="collapse"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <form action="#">
+                <div class="form-group">
+                    <label>Your name:</label>
+                    <input type="text" class="form-control" placeholder="Username">
+                </div>
+                <div class="form-group">
+                    <label>Your password:</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label>Your message:</label>
+                    <textarea rows="3" cols="3" class="form-control" placeholder="Default textarea"></textarea>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <button type="reset" class="btn btn-danger btn-block">Reset</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-info btn-block">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- /form sample -->
+}
