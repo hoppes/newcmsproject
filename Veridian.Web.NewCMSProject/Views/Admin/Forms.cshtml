@@ -1,0 +1,156 @@
+﻿
+@{
+    ViewBag.Title = "Forms";
+    ViewBag.BodyClass = "navbar-top sidebar-xs";
+
+    // NavClass
+    // fixed-top : makes top navbar stick to top of viewport
+    // navbar-slide-top : makes top navbar hide as you scroll down and appear as you scroll up
+
+    ViewBag.NavClass = "navbar-slide-top fixed-top";
+
+    Layout = "~/Views/Admin/Shared/_Layout.cshtml";
+}
+
+@section PageHeader {
+    <!-- Page header -->
+    <div class="page-header page-header-light  page-header-lg">
+        <div class="page-header-content header-elements-md-inline">
+            <div class="page-title d-flex">
+                <h4><i class="icon-align-left position-left"></i> <span class="text-semibold">Forms</span></h4>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+            <div class="heading-elements">
+            </div>
+        </div>
+        <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+            <div class="d-flex">
+                <div class="breadcrumb">
+                    <a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+                    <span class="breadcrumb-item active">Dashboard</span>
+                </div>
+                <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+            </div>
+        </div>
+
+    </div>
+    <!-- /page header -->
+}
+
+<!-- Content area -->
+<div class="content">
+
+    <!-- Form layouts -->
+    <div class="row">
+        <div class="col">
+            <!-- Horizontal form -->
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5 class="card-title">Horizontal form</h5>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="fullscreen"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Text input</label>
+                            <div class="col-lg-9">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Password</label>
+                            <div class="col-lg-9">
+                                <input type="password" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Select</label>
+                            <div class="col-lg-9">
+                                <select name="select" class="form-control">
+                                    <option value="opt1">Basic select</option>
+                                    <option value="opt2">Option 2</option>
+                                    <option value="opt3">Option 3</option>
+                                    <option value="opt4">Option 4</option>
+                                    <option value="opt5">Option 5</option>
+                                    <option value="opt6">Option 6</option>
+                                    <option value="opt7">Option 7</option>
+                                    <option value="opt8">Option 8</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+
+                            <label class="col-lg-3 col-form-label">Radio Options</label>
+                            <div class="col-lg-9  pl-3">
+                                <div class="row pt-1">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio1">Toggle this custom bootstrap radio</label>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input">
+                                        <label class="custom-control-label" for="customRadio2">Or toggle this other custom radio</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /horizotal form -->
+        </div>
+        <div class="col">
+            <!-- Vertical form -->
+            <div class="card">
+                <div class="card-header header-elements-inline">
+                    <h5 class="card-title">Vertical form</h5>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a class="list-icons-item" data-action="fullscreen"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <form action="#">
+                        <div class="form-group">
+                            <label>Text input</label>
+                            <input type="text" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label>Select</label>
+                            <select name="select" class="form-control">
+                                <option value="opt1">Basic select</option>
+                                <option value="opt2">Option 2</option>
+                                <option value="opt3">Option 3</option>
+                                <option value="opt4">Option 4</option>
+                                <option value="opt5">Option 5</option>
+                                <option value="opt6">Option 6</option>
+                                <option value="opt7">Option 7</option>
+                                <option value="opt8">Option 8</option>
+                            </select>
+                        </div>
+                        <div class="text-right">
+                            <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- /vertical form -->
+        </div>
+    </div>
+    <!-- /form layouts -->
+
+</div>
+<!-- /Content area -->

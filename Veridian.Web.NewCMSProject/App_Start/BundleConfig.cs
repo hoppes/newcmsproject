@@ -38,8 +38,12 @@ public class BundleConfig
         ));
 
         // GoogleFont CDN
-        var GoogleFontCdnPath = "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700,900";
+        var GoogleFontCdnPath = "https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Roboto:300,400,500,700,900|Oswald:200,300,400,500,600,700";
         bundles.Add(new StyleBundle("~/content/GoogleFont", GoogleFontCdnPath));
+
+        // FontAwesome CDN
+        var FontAwesomeCdnPath = "https://use.fontawesome.com/releases/v5.5.0/css/all.css";
+        bundles.Add(new StyleBundle("~/content/FontAwesome", FontAwesomeCdnPath));
 
 
         // ------------------------------------
@@ -68,15 +72,17 @@ public class BundleConfig
             "~/Scripts/Validate/jquery.validate.js",
             "~/Scripts/Validate/jquery.validate.unobtrusive.js",
             // TinyMCE
-            "~/Scripts/tinymce/tinymce.min.js",
+            "~/Scripts/tinymce/tinymce.min.js", 
             // pNotify
             "~/Scripts/pNotify/3.2.0/pnotify.min.js",
             // jQueryUI
             "~/Scripts/jQueryUI/1.11.4/jquery-ui.min.js",
             // Fab
-            "~/Scripts/Fab/fab.min.js",
+            "~/Scripts/UI/Fab/fab.min.js",
             // Datatable
             "~/Scripts/Datatables/Datatables.min.js",
+            // Headroom
+            "~/Scripts/UI/Headroom/0.9.4/Headroom.js",
             // Admin
             "~/Scripts/Admin/app.js",
             // Admin

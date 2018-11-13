@@ -16,8 +16,9 @@ input[type="file"] { display: block; }
  *  Override and extend default Bootstrap styles.
  *
  * ---------------------------------------------------------------------------- */
+body { /*font-family: 'Oswald';*/  font-weight:400; }
 h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 { letter-spacing: -0.015em; }
+.h1, .h2, .h3, .h4, .h5, .h6 { letter-spacing: 0.015em; font-family:'Roboto Condensed'; }
 
 .list > li,
 .list > li .list > li { margin-top: 0.3125rem; }
@@ -417,7 +418,7 @@ div[class*=table-responsive] > .table tbody:first-child tr:first-child td { bord
  * ---------------------------------------------------------------------------- */
 legend { padding-top: 0.625rem; padding-bottom: 0.625rem; margin-bottom: 1.25rem; border-bottom: 1px solid #ddd; font-size: 0.8125rem; }
 fieldset:first-child legend:first-child { padding-top: 0; }
-
+.col-form-label, label { font-weight:500; }
 select[multiple],
 select[size] { height: 200px; padding: 0.875rem; }
 select[multiple] option,
@@ -425,7 +426,10 @@ select[size] option { padding: 0.5rem 1rem; border-radius: 0.1875rem; }
 select[multiple] option + option,
 select[size] option + option { margin-top: 1px; }
 
-.form-control { background-clip: border-box; }
+.custom-radio .custom-control-input:checked ~ .custom-control-label::before { background-color: rgb(120, 191, 19); }
+.custom-control-input:focus ~ .custom-control-label::before { box-shadow: 0 0 0 1px #fff,0 0 0 .2rem rgba(120, 191, 19,.25); }
+
+.form-control { background-clip: border-box; background:#f7f7f7; }
 .form-control:disabled { color: #999; }
 .form-control[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent):disabled, .form-control[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent)[readonly] { background-color: #8c8c8c; color: rgba(255, 255, 255, 0.5); border-color: #8c8c8c; }
 .form-control[class*=bg-]:not(.bg-white):not(.bg-light):not(.bg-transparent)::-webkit-input-placeholder { color: #fff; }
@@ -1222,7 +1226,9 @@ background: linear-gradient(to right, #007a50, #78BF13); /* W3C, IE 10+/ Edge, F
 .navbar-header .navbar-brand-xs { display: none; }
 .sidebar-xs .navbar-header .navbar-brand-md { display: none; }
 .sidebar-xs .navbar-header .navbar-brand-xs { display: inline-block; min-width: 3.5rem; margin-left: 0; text-align: center; }
-
+.sidebar-component-toggle { display:none; }
+.sidebar-component-toggle-left .sidebar-component-toggle,
+.sidebar-component-toggle-right .sidebar-component-toggle { display:block; }
 .navbar-static { z-index: 100; }
 
 /* ------------------------------------------------------------------------------
@@ -1659,7 +1665,8 @@ a.badge[class*=bg-]:not(.bg-transparent):not(.bg-white):not(.bg-light):hover, a.
  *  Override and extend default tooltip styles.
  *
  * ---------------------------------------------------------------------------- */
-.bs-tooltip-top .arrow[class*=border-]:before { border-top-color: inherit; }
+.
+-top .arrow[class*=border-]:before { border-top-color: inherit; }
 
 .bs-tooltip-right .arrow[class*=border-]:before { border-right-color: inherit; }
 

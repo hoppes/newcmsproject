@@ -23,5 +23,17 @@ namespace Veridian.Web.NewCMSProject.Controllers
             return View();
         }
 
+        // GET: Icons
+        public ActionResult Icons()
+        {
+            return View();
+        }
+
+        // GET: Forms
+        public ActionResult Forms()
+        {
+            return View();
+        }
+
     }
 }

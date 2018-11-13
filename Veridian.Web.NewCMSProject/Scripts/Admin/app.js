@@ -1,12 +1,4 @@
-﻿/* ------------------------------------------------------------------------------
- *
- *  # Template JS core
- *
- *  Includes minimum required JS code for proper template functioning
- *
- * ---------------------------------------------------------------------------- */
-
-
+﻿
 // Setup module
 // ------------------------------
 
@@ -304,6 +296,74 @@ var App = function () {
             $(this).tab('show');
         });
     };
+    
+    // Nav Hideable
+    var _navigationHideable = function () {
+        if (typeof Headroom == 'undefined') {
+            console.warn('Warning - headroom.min.js is not loaded.');
+            return;
+        }
+
+        // Define elements
+        var navbarTop = document.querySelector('.navbar-slide-top'),
+            navbarBottom = document.querySelector('.navbar-slide-bottom');
+
+
+        //
+        // Top navbar
+        //
+
+        if (navbarTop) {
+
+            // Construct an instance of Headroom, passing the element
+            var headroomTop = new Headroom(navbarTop, {
+                offset: navbarTop.offsetHeight,
+                tolerance: {
+                    up: 10,
+                    down: 10
+                },
+                onUnpin: function () {
+                    $('.headroom').find('.show').removeClass('show');
+                }
+            });
+
+            // Initialise
+            headroomTop.init();
+        }
+
+
+
+        //
+        // Bottom navbar
+        //
+
+        if (navbarBottom) {
+
+            // Construct an instance of Headroom, passing the element
+            var headroomBottom = new Headroom(navbarBottom, {
+                offset: navbarBottom.offsetHeight,
+                tolerance: {
+                    up: 10,
+                    down: 10
+                },
+                onUnpin: function () {
+                    $('.headroom').find('.show').removeClass('show');
+                }
+            });
+
+            // Initialise
+            headroomBottom.init();
+        }
+    };
+
+    // FAB Menu
+    var _navigationFabMenu = function () {
+
+        $('ul.fab-menu-pages').on("click", function () {
+            $('#overlay').fadeToggle();
+        });
+
+    };
 
 
     // Components
@@ -313,7 +373,19 @@ var App = function () {
     var _componentTooltip = function () {
 
         // Initialize
-        $('[data-popup="tooltip"]').tooltip();
+        //$('[data-popup="tooltip"]').tooltip();
+        $('[data-toggle="tooltip"]').tooltip({
+            position: {
+                animation: true,
+                container: true,
+                selector: true,
+                template: '<div class="tooltip" role="tooltip"><div class="arrow"></div><div class="tooltip-inner"></div></div>',
+                placement: 'top',
+                delay: { "show": 500, "hide": 100 },
+                my: "center bottom",
+                at: "center",
+            }
+        });
 
     };
 
@@ -322,6 +394,103 @@ var App = function () {
         $('[data-popup="popover"]').popover();
     };
 
+    // pNotify
+    var _componentPnotify = function () {
+        if (typeof PNotify == 'undefined') {
+            console.warn('Warning - pnotify.min.js is not loaded.');
+            return;
+        }
+
+
+        // Solid primary Test
+        $('#pnotify-solid-primary').on('click', function () {
+            new PNotify({
+                title: 'Primary notice',
+                text: 'Check me out! I\'m a notice.',
+                addclass: 'bg-primary border-primary'
+            });
+        });
+
+        // Solid danger Test
+        $('#pnotify-solid-danger').on('click', function () {
+            new PNotify({
+                title: 'Danger notice',
+                text: 'Check me out! I\'m a notice.',
+                addclass: 'bg-danger border-danger'
+            });
+        });
+
+        // Solid success Test
+        $('#pnotify-solid-success').on('click', function () {
+            new PNotify({
+                title: 'Success notice',
+                text: 'Check me out! I\'m a notice.',
+                addclass: 'bg-success border-success'
+            });
+        });
+
+        // Solid warning Test
+        $('#pnotify-solid-warning').on('click', function () {
+            new PNotify({
+                title: 'Warning notice',
+                text: 'Check me out! I\'m a notice.',
+                addclass: 'bg-warning border-warning'
+            });
+        });
+
+        // Solid info Test
+        $('#pnotify-solid-info').on('click', function () {
+            new PNotify({
+                title: 'Info notice',
+                text: 'Check me out! I\'m a notice.',
+                addclass: 'bg-info border-info'
+            });
+        });
+
+
+        function showNotification(noticeText, noticeType, inputTitle) {
+            var noticeCss, noticeTitle;
+            switch (noticeType) {
+                case "primary":
+                    noticeCss = "bg-primary border-primary";
+                    noticeTitle = "Notification";
+                    break;
+                case "success":
+                    noticeCss = "bg-success border-success";
+                    noticeTitle = "Success";
+                    break;
+                case "info":
+                    noticeCss = "bg-info border-info";
+                    noticeTitle = "Information";
+                    break;
+                case "warning":
+                    noticeCss = "bg-warning border-warning";
+                    noticeTitle = "Warning";
+                    break;
+                case "danger":
+                    noticeCss = "bg-danger border-danger";
+                    noticeTitle = "Danger";
+                    break;
+                default:
+                    noticeCss = "bg-primary border-primary";
+                    noticeTitle = "Notification";
+            }
+            if (inputTitle != "default") {
+                noticeTitle = inputTitle;
+            }
+
+            new PNotify({
+                title: noticeTitle,
+                text: noticeText,
+                addclass: noticeCss,
+                buttons: {
+                    sticker: false
+                }
+            });
+        };
+
+
+    };
 
     // Card actions
     // -------------------------
@@ -463,12 +632,15 @@ var App = function () {
         initNavigations: function () {
             _navigationSidebar();
             _navigationNavbar();
+            _navigationHideable();
+            _navigationFabMenu();
         },
 
         // Initialize all components
         initComponents: function () {
             _componentTooltip();
             _componentPopover();
+            _componentPnotify();
         },
 
         // Initialize all card actions
